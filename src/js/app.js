@@ -1,5 +1,9 @@
 import GameSavingLoader from './GameSavingLoader';
 
 (async () => {
-  GameSavingLoader.load();
+  try {
+    GameSavingLoader.load();
+  } catch (err) {
+    throw new Error(err);
+  }
 })();
